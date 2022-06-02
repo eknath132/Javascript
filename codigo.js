@@ -1,3 +1,5 @@
+let carrito = []
+
 // funcion para poder agregar los slider dinamicamente
 sliders.map((slider, i) => {
     let div = document.createElement('div')
@@ -20,9 +22,23 @@ stock.map(producto => {
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <div style="width: 100%" class= "d-flex justify-content-end">
-                <button type="button" class="btn btn-outline-primary">Agregar al carrito</button>
+                <button id="${producto.id}" type="button" class="btn btn-outline-primary">Agregar al carrito</button>
             </div>
         </div>
     </div>`
+
     productos.appendChild(div)
 })
+// por cada boton de agregar carrito, se genera un addEventListener y escribe de manera dinamica cuantos productos hay en el carrito
+for(const button of btn){
+    button.addEventListener('click', (e) => {
+        let producto = stock.find(product => product.id == e.target.id)
+        if(producto){
+            carrito.push(producto)
+        }
+        if(carrito.length > 0 ){
+            cart.classList.remove('hidden')
+            cart.innerHTML = carrito.length
+        }
+    })
+}

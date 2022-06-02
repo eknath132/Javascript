@@ -8,6 +8,7 @@ body {
     padding: 20px 0
 }
 
+
 /* NAV */
 .logo {
     width: 80px;
@@ -35,3 +36,39 @@ body {
     font-size: 2rem;
     text-align: center;
 }
+
+
+.sidebar-social a span {
+    color: black;
+    font-size: 15px;
+    padding: 5px 0 10px 0;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
+  }
+  /* CSS para posicionar el bade cerca del carrito*/
+  .cart {
+    position: relative;
+    color:'red'
+  }
+  
+  #cart {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 55%;
+    background: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2px;
+  }
+
+  .hidden {
+      display: none !important;
+  }
