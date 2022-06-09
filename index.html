@@ -33,9 +33,9 @@
                   <div class="navButton">
                       Contactanos
                   </div>
-                  <div class="navButton">
+                  <div id="iconCart" class="navButton" >
                     <a class="cart" title="Facebook" target="_blank" rel="nofollow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                      <svg data-bs-toggle="offcanvas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                       </svg>
                       <span id="cart" data-action="cart-can" class="hidden badge rounded-circle"></span>
@@ -69,6 +69,40 @@
 
             <div id="productos" class="row row-cols-1 row-cols-md-3 g-4" style="padding: 0 20px; margin:0 20px">
               
+            </div>
+            <!-- <div> -->
+              <div class="row">
+                <div class="col productoTitle">
+                  Formulario
+                </div>
+              </div>  
+              <form style="padding:0 50px">
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Nombre" required>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control" placeholder="Apellido" required>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control" placeholder="numero de celular" required>
+                  </div>
+                  <div style="margin-top:10px" class="col-12">
+                    <textarea class="form-control" id="validationTextarea" required placeholder="Required example textarea"></textarea>                  
+                  </div>
+                </div>
+                <div style="margin-top:10px" class="col-12 d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">Enviar formulario</button>
+                </div>
+              </form>
+            <!-- </div> -->
+
+            <div id="offcanvasBottom" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Carrito</h5>
+              </div>
+              <div id="offcanvasCarrito" class="offcanvas-body">
+              </div>
             </div>
           </div>
         <script src="arrays.js"> </script>

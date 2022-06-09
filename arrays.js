@@ -29,5 +29,25 @@ const stock = [
         id: 4,
         nombre: 'taza polimero + cuchara',
         foto: './images/productos/tazaPolimero+Cuchara.jpg'
+    },{
+        id: 5,
+        nombre: 'botella con vinilo',
+        foto: './images/productos/botellaConVinilo.jpg'
+    },{
+        id: 6,
+        nombre: 'mouse pad',
+        foto: './images/productos/mousePad.jpg'
+    },{
+        id: 7,
+        nombre: 'porta celular',
+        foto: './images/productos/portaCelular.jpg'
+    },{
+        id: 8,
+        nombre: 'taza asa de corazon',
+        foto: './images/productos/tazaAsaCorazon.jpg'
+    },{
+        id: 9,
+        nombre: 'gorra',
+        foto: './images/productos/gorraTrucker.jpg'
     }
 ]

@@ -1,5 +1,9 @@
-let carrito = []
-
+const carritoStorage = JSON.parse(localStorage.getItem('carrito'))
+let carrito = carritoStorage ? carritoStorage : []
+if(carrito.length > 0 ){
+    cart.classList.remove('hidden')
+    cart.innerHTML = carrito.length
+}
 // funcion para poder agregar los slider dinamicamente
 sliders.map((slider, i) => {
     let div = document.createElement('div')
@@ -26,7 +30,6 @@ stock.map(producto => {
             </div>
         </div>
     </div>`
-
     productos.appendChild(div)
 })
 // por cada boton de agregar carrito, se genera un addEventListener y escribe de manera dinamica cuantos productos hay en el carrito
@@ -40,5 +43,46 @@ for(const button of btn){
             cart.classList.remove('hidden')
             cart.innerHTML = carrito.length
         }
+        localStorage.setItem('carrito', JSON.stringify(carrito))
     })
 }
+
+buttonCart.addEventListener('click', (e) => {
+    if(carrito.length > 0){
+        let bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
+        bsOffcanvas.show()
+        let result = carrito.reduce((prev, current) => {
+            // Compruebo si ya existe el elemeento
+            let exists = prev.find(x => x.nombre === current.nombre);
+            // Si no existe lo creo con un array vacío en un objeto
+            if (!exists) {
+              const notExists = {nombre: current.nombre, foto: current.foto, cantidad: 1};
+              prev.push(notExists);
+            }
+            // Si existe reemplazo la cantidad + 1
+            if(exists){
+                const datosActualizados = prev.map(prev =>{
+                    return {nombre: prev.nombre, foto: prev.foto, cantidad: exists.nombre == prev.nombre ? prev.cantidad + 1 : prev.cantidad}
+                })
+                prev = datosActualizados
+            }
+            // Devuelvo el array resultado para la nueva iteración
+            return prev;
+        }, []);
+
+        result.map(producto => {
+            let div = document.createElement('div')
+            div.className = 'row'
+            div.innerHTML = `
+                <div class="col-6" style="margin-top:10px">
+                    <img src=${producto.foto} style="width:100px; height:100px" alt=${producto.nombre}>
+                </div>
+                <div class="col-6 d-flex align-items-center" style="font-size:16px; font-weight:bold">
+                    ${producto.nombre}
+                    <span> X ${producto.cantidad} </span>
+                </div>  
+            `
+            offCanvasCarrito.appendChild(div)
+        })
+    }
+})
