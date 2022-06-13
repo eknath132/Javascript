@@ -1,6 +1,6 @@
 const carritoStorage = JSON.parse(localStorage.getItem('carrito'))
 let carrito = carritoStorage ? carritoStorage : []
-if(carrito.length > 0 ){
+if(carritoStorage && carrito.length > 0 ){
     cart.classList.remove('hidden')
     cart.innerHTML = carrito.length
 }
@@ -44,6 +44,11 @@ for(const button of btn){
             cart.innerHTML = carrito.length
         }
         localStorage.setItem('carrito', JSON.stringify(carrito))
+        Toastify({
+            text: "Se agrego al carrito",
+            gravity:'bottom',
+            position: 'right'
+          }).showToast();
     })
 }
 
