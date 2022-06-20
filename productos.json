@@ -1,0 +1,42 @@
+{
+    "productos": [
+        
+        {
+            "id": 1,
+            "nombre": "Taza de polimero",
+            "foto": "./images/productos/tazaPolimero.jpg"
+        },{
+            "id": 2,
+            "nombre": "Taza de ceramica",
+            "foto": "./images/productos/tazaCeramica.jpg"
+        },{
+            "id": 3,
+            "nombre": "Taza esmerilada",
+            "foto": "./images/productos/tazaEsmerilada.jpg"
+        },{
+            "id": 4,
+            "nombre": "Taza polimero + cuchara",
+            "foto": "./images/productos/tazaPolimero+Cuchara.jpg"
+        },{
+            "id": 5,
+            "nombre": "Botella con vinilo",
+            "foto": "./images/productos/botellaConVinilo.jpg"
+        },{
+            "id": 6,
+            "nombre": "Mouse pad",
+            "foto": "./images/productos/mousePad.jpg"
+        },{
+            "id": 7,
+            "nombre": "Porta celular",
+            "foto": "./images/productos/portaCelular.jpg"
+        },{
+            "id": 8,
+            "nombre": "Taza asa de corazon",
+            "foto": "./images/productos/tazaAsaCorazon.jpg"
+        },{
+            "id": 9,
+            "nombre": "Gorra",
+            "foto": "./images/productos/gorraTrucker.jpg"
+        }
+    ]
+}

@@ -17,23 +17,15 @@
               </div>
               <div class="col-8 col-md-6 d-flex justify-content-center">
                 <div class="d-flex justify-content-end align-items-center" style="width:100%">
-                  <form class="d-flex">
-                    <input id="searchProduct" class="form-control search" type="search" placeholder="Buscar producto" aria-label="Search">
-                    <button class="btn" type="submit">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
-                    </button>
-                  </form>
-                  <div class="navButton">
+                  <a  class="navButton">
                       Inicio
-                  </div>
-                  <div class="navButton">
+                  </a>
+                  <a href="#productos" class="navButton">
                       Productos
-                  </div>
-                  <div class="navButton">
+                  </a>
+                  <a href="#formulario" class="navButton">
                       Contactanos
-                  </div>
+                  </a>
                   <div id="iconCart" class="navButton" >
                     <a class="cart" title="Facebook" target="_blank" rel="nofollow">
                       <svg data-bs-toggle="offcanvas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -68,34 +60,39 @@
               </div>
             </div>
 
-            <div id="productos" class="row row-cols-1 row-cols-md-3 g-4" style="padding: 0 20px; margin:0 20px">
+            <div id="productos" class="row row-cols-1 row-cols-md-3 g-4 py-2" style="padding: 0 20px; margin:0 20px">
               
             </div>
             <!-- <div> -->
-              <div class="row">
-                <div class="col productoTitle">
-                  Formulario
+              <div id="formulario" style="position:relative" >
+                <div style="width:100%; height: 100px; overflow: hidden; z-index: 1;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-11.66,64.65 C150.00,150.00 349.21,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #08f;"></path></svg></div>
+                <div style="background: #08f; margin-top: -10px;" class="py-2" >
+                  <div class="row">
+                    <div class="col productoTitle">
+                      Formulario
+                    </div>
+                  </div>  
+                  <form class="w-75 mx-auto">
+                    <div class="row justify-content-between">
+                      <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Nombre" required>
+                      </div>
+                      <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Apellido" required>
+                      </div>
+                      <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Celular" required>
+                      </div>
+                      <div style="margin-top:10px" class="col-12">
+                        <textarea class="form-control" id="validationTextarea" required placeholder="Escriba su consulta"></textarea>                  
+                      </div>
+                    </div>
+                    <div style="margin-top:10px" class="col-12 d-flex justify-content-center">
+                      <button type="submit" class="btn btn-primary">Enviar formulario</button>
+                    </div>
                 </div>
-              </div>  
-              <form style="padding:0 50px">
-                <div class="row justify-content-between">
-                  <div class="col-4">
-                    <input type="text" class="form-control" placeholder="Nombre" required>
-                  </div>
-                  <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Apellido" required>
-                  </div>
-                  <div class="col-3">
-                    <input type="text" class="form-control" placeholder="numero de celular" required>
-                  </div>
-                  <div style="margin-top:10px" class="col-12">
-                    <textarea class="form-control" id="validationTextarea" required placeholder="Required example textarea"></textarea>                  
-                  </div>
-                </div>
-                <div style="margin-top:10px" class="col-12 d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">Enviar formulario</button>
-                </div>
-              </form>
+                </form>
+              </div>
             <!-- </div> -->
 
             <div id="offcanvasBottom" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">

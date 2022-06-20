@@ -16,23 +16,29 @@ sliders.map((slider, i) => {
     }
     carouselInner.appendChild(div)
 })
-// funcion para poder agregar los productos dinamicamente
-stock.map(producto => {
-    let div = document.createElement('div')
-    div.className = 'col col-md-3'
-    div.innerHTML = `
-    <div class="card h-100">
-        <img src=${producto.foto} style="width:100%; height:250px" class="card-img-top" alt=${producto.nombre}>
-        <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <div style="width: 100%" class= "d-flex justify-content-end">
-                <button id="${producto.id}" type="button" class="btn btn-outline-primary">Agregar al carrito</button>
+// funcion para poder agregar los productos dinamicamente usando fetch un json local
+fetch('productos.json')
+.then((resp) => resp.json())
+.then((data) => {
+    data.productos.map(producto => {
+        let div = document.createElement('div')
+        div.className = 'col col-md-3'
+        div.innerHTML = `
+        <div class="card h-100">
+            <img src=${producto.foto} style="width:100%; height:250px" class="card-img-top" alt=${producto.nombre}>
+            <div class="card-body">
+                <h6 class="card-title">${producto.nombre}</h6>
+                <div style="width: 100%" class= "d-flex justify-content-end py-1">
+                    <button id="${producto.id}" type="button" class="btn btn-outline-primary">Agregar al carrito</button>
+                </div>
             </div>
-        </div>
-    </div>`
-    productos.appendChild(div)
+        </div>`
+        productos.appendChild(div)
+    })
 })
+
 // por cada boton de agregar carrito, se genera un addEventListener y escribe de manera dinamica cuantos productos hay en el carrito
+
 for(const button of btn){
     button.addEventListener('click', (e) => {
         let producto = stock.find(product => product.id == e.target.id)
