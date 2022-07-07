@@ -33,11 +33,16 @@ a {
     border-color: rgba(255, 0, 0, 0.2);
 }
 
+.grow {
+    flex-grow: 0 !important;
+}
+
 /* PRODUCTOS */
 
 .productoTitle {
     font-size: 2rem;
     text-align: center;
+    color: #d76400
 }
 
 

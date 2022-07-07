@@ -2,7 +2,7 @@
 const sliders = [
     {
         id: 1,
-        foto: './images/sliders/sliderOne.png'
+        foto: './images/sliders/slider1.jpg'
     },{
         id: 2,
         foto: './images/sliders/slider2.jpg'

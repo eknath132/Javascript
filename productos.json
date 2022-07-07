@@ -4,39 +4,48 @@
         {
             "id": 1,
             "nombre": "Taza de polimero",
-            "foto": "./images/productos/tazaPolimero.jpg"
+            "foto": "./images/productos/tazaPolimero.jpg",
+            "precio": "300"
         },{
             "id": 2,
             "nombre": "Taza de ceramica",
-            "foto": "./images/productos/tazaCeramica.jpg"
+            "foto": "./images/productos/tazaCeramica.jpg",
+            "precio": "700"
         },{
             "id": 3,
             "nombre": "Taza esmerilada",
-            "foto": "./images/productos/tazaEsmerilada.jpg"
+            "foto": "./images/productos/tazaEsmerilada.jpg",
+            "precio": "600"
         },{
             "id": 4,
             "nombre": "Taza polimero + cuchara",
-            "foto": "./images/productos/tazaPolimero+Cuchara.jpg"
+            "foto": "./images/productos/tazaPolimero+Cuchara.jpg",
+            "precio": "500"
         },{
             "id": 5,
             "nombre": "Botella con vinilo",
-            "foto": "./images/productos/botellaConVinilo.jpg"
+            "foto": "./images/productos/botellaConVinilo.jpg",
+            "precio": "900"
         },{
             "id": 6,
             "nombre": "Mouse pad",
-            "foto": "./images/productos/mousePad.jpg"
+            "foto": "./images/productos/mousePad.jpg",
+            "precio": "300"
         },{
             "id": 7,
             "nombre": "Porta celular",
-            "foto": "./images/productos/portaCelular.jpg"
+            "foto": "./images/productos/portaCelular.jpg",
+            "precio": "450"
         },{
             "id": 8,
             "nombre": "Taza asa de corazon",
-            "foto": "./images/productos/tazaAsaCorazon.jpg"
+            "foto": "./images/productos/tazaAsaCorazon.jpg",
+            "precio": "400"
         },{
             "id": 9,
             "nombre": "Gorra",
-            "foto": "./images/productos/gorraTrucker.jpg"
+            "foto": "./images/productos/gorraTrucker.jpg",
+            "precio": "650"
         }
     ]
 }
