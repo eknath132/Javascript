@@ -11,6 +11,7 @@ class Producto {
         this.precio = precio
     }
 }
+// Si el array de carrito tiene objetos, se remueve la clase y empieza el contador
 
 if(carrito.length > 0 ){
     cart.classList.remove('hidden')
@@ -79,6 +80,7 @@ fetch('productos.json')
     }
 })
 
+// escuchamos los eventos del button cart, si no hay nada en el carrito se muestra un mensaje al cliente
 buttonCart.addEventListener('click', (e) => {
     if(carrito.length > 0){
         let bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
@@ -95,7 +97,7 @@ buttonCart.addEventListener('click', (e) => {
         }).showToast();
     }
 })
-
+// Mostramos en el canvas nuestra lista de los productos que seleccionamos
 function showProductosEnCanvas() {
        
         let result = carrito.reduce((prev, current) => {
@@ -125,14 +127,15 @@ function showProductosEnCanvas() {
 
         }
 
+        // se hace el mapeo de result para dibujar mediante DOM la lista de los productos 
         result.map(producto => {
             let div = document.createElement('div')
             div.className = 'row'
             div.innerHTML = `
-                <div class="col-4" style="margin-top:10px">
+                <div class="col-3" style="margin-top:10px">
                     <img src=${producto.foto} style="width:40px; height:40px ; border-radius:30px" alt=${producto.nombre}>
                 </div>
-                <div class="col-6 d-flex justify-content-between align-items-center" style="font-size:16px">
+                <div class="col-7 d-flex justify-content-between align-items-center" style="font-size:16px">
                     <div> ${producto.nombre} </div>
                     <div> x ${producto.cantidad} </div>
                 </div>
@@ -160,6 +163,8 @@ function showProductosEnCanvas() {
             });
         })
 }
+
+// Escuchamos el evento click para finalizar la compra
 
 finalizar.addEventListener('click', (e) => {
     e.preventDefault()
@@ -190,6 +195,8 @@ finalizar.addEventListener('click', (e) => {
     }
 })
 
+
+// Escuchamos el evento del click de enviar el formulario 
 enviar.addEventListener('click', (e) => {
     e.preventDefault()
     Swal.fire({

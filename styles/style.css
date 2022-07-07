@@ -12,6 +12,7 @@ a {
     color: black;
 }
 
+
 /* NAV */
 .logo {
     width: 80px;
@@ -24,6 +25,7 @@ a {
 .navButton {
     cursor: pointer;
     margin-left: 20px;
+    color:'black'
 }
 
 .search {
