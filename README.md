@@ -1,1 +1,1 @@
-# Javascript
+# Curso de JS en CoderHouse
